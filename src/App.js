@@ -9,8 +9,8 @@ import React, { useEffect, useState } from "react";
 import {Card} from "./components/card.js"
 
 function App() {
-
   const [pokemons, setPokemons] = useState([]);
+
   useEffect(() => {
     getPokemons();
   }, []);
@@ -35,7 +35,7 @@ function App() {
           {pokemons.length === 0 ? (
             <div>carregando...</div>
           ) : (
-            pokemons.map((pokemon, key) => Card(pokemon.data, key))
+            pokemons.map((pokemon, key) => <Card pokemon={pokemon.data} key={key} />)
           )}
         </div>
       </Container>
