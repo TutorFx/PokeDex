@@ -1,0 +1,62 @@
+.pokeitem{
+  max-width: 300px;
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 30px;
+  .pokeimg{
+    position: relative;
+    span{
+      font-size: 30px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 10px 20px 10px 20px;
+
+      z-index: 1;
+
+      color: #000;
+      opacity: 0.05;
+      font-weight: bolder;
+    }
+  }
+  .pokedata{
+    padding: 30px;
+    padding-top: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: .75rem;
+    .types{
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      span{
+        padding: 2px 10px;
+        border-radius: 5px;
+        color: white;
+      }
+    }
+    .name{
+      text-transform: capitalize;
+      font-size: 1.75rem;
+      line-height: normal;
+    }
+  }
+  svg#a {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: -80px;
+  }
+  img.sprite{
+    max-width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    z-index: 1;
+  }
+  background-color: #F5F5F5;
+}

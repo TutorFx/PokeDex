@@ -1,0 +1,20 @@
+export const colors = {
+  fire: {color: "#FDDFDF", strongcolor: "#f42"},
+  grass: {color:"#DEFDE0", strongcolor: "#7c5"},
+  electric: {color:"#FCF7DE", strongcolor: "#fc3"},
+  water: {color:"#DEF3FD", strongcolor: "#39f"},
+  ground: {color:"#f4e7da", strongcolor: "#db5"},
+  rock: {color:"#d5d5d4", strongcolor: "#ba6"},
+  fairy: {color:"#fceaff", strongcolor: "#e9e"},
+  poison: {color:"#98d7a5", strongcolor: "#a59"},
+  bug: {color:"#f8d5a3", strongcolor: "#ab2"},
+  dragon: {color:"#97b3e6", strongcolor: "#76e"},
+  psychic: {color:"#eaeda1", strongcolor: "#f59"},
+  flying: {color:"#F5F5F5", strongcolor: "#89f"},
+  fighting: {color:"#E6E0D4", strongcolor: "#b54"},
+  ghost: {color:"#8C8CFF", strongcolor: "#66b"},
+  normal: {color:"#D9D9D9", strongcolor: "#aa9"},
+  ice: {color: "#A6DEFD", strongcolor: "#6cf"},
+  steel: {color: "#E8E8FF",strongcolor:"#aab"},
+  dark: {color:"#FFB691", strongcolor:"#754"}
+};
