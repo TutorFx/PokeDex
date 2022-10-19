@@ -7,13 +7,13 @@ import IconButton from '@mui/material/IconButton';
 import SwitchAccessShortcut from '@mui/icons-material/SwitchAccessShortcut';
 
 export const Card = ({ pokemon }) => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   
   return (
     <div className="pokeitem" id={pokemon.name}>
-      {console.log(pokemon)}
       <div className="pokeimg">
-        <span>{`#${pokemon.id}`}</span>
+        <span className="id">{`#${pokemon.id}`}</span>
+        <span className="status">{toggle ? 'normal' : 'shiny'}</span>
         {colors[pokemon.types[0].type.name] !== undefined ? (
           <svg
             id="a"
@@ -41,7 +41,7 @@ export const Card = ({ pokemon }) => {
         <img
           className="sprite"
           alt="sprite"
-          src={pokemon.sprites.other["official-artwork"].front_default}
+          src={pokemon.sprites.other.home[`front_${toggle ? 'default' : 'shiny'}`]}
         />
       </div>
       <div className="pokedata">
@@ -50,10 +50,15 @@ export const Card = ({ pokemon }) => {
             <span className={`type-${tipo.type.name}`} key={_kid}>{tipo.type.name}</span>
           ))}
         </div>
-        <span className="name">{pokemon.name}</span>
-        <IconButton onClick={() => setToggle(!toggle)} aria-label="delete">
-          <SwitchAccessShortcut />
-        </IconButton>
+        <div className="toolbar">
+          <span className="name">{pokemon.name}</span>
+          <IconButton onClick={() => setToggle(!toggle)} aria-label="delete">
+            <SwitchAccessShortcut />
+          </IconButton>
+        </div>
+        {pokemon.stats.map((tipo, _sid) => (
+          <span className="stat" key={_sid}>{`${tipo.stat.name}: ${tipo.base_stat}`}</span>
+        ))}
       </div>
     </div>
   )

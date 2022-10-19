@@ -35,7 +35,7 @@ function App() {
           {pokemons.length === 0 ? (
             <div>carregando...</div>
           ) : (
-            pokemons.map((pokemon, key) => <Card pokemon={pokemon.data} key={key} />)
+            pokemons.map((pokemon, key) => <Card pokemon={pokemon.data} key={key.toString()} />)
           )}
         </div>
       </Container>
